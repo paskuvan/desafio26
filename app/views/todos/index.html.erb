@@ -1,0 +1,15 @@
+<h1>ToDos</h1>
+<% @todos.each do |t| %>
+  <div class="well">
+    <h2> <%= t.description %> </h2>
+    <%= link_to 'Ver ToDo', todo_path(t.id), class:'btn btn-success' %>
+    <%= link_to 'Modificar ToDo', edit_todo_path(t.id), class:'btn btn-warning' %>
+    <%= link_to "Eliminar ToDo", t, method: :delete, data: {confirm: '¿Eliminar ToDo?'}, class:'btn btn-danger' %>
+  </div>
+<% end %>
+
+<div class="btn-group">
+<%= link_to 'Agregar ToDo', todos_new_path, class:'btn btn-info' %>
+
+
+</div>
