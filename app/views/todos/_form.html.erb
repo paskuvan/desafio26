@@ -1,5 +1,5 @@
 <%= form_with model: @todo, local: true do |t| %>
-  <div class="well">
+  <div class="alert alert-dismissible alert-info">
     <%= t.label :description, "Nombre de ToDo" %>
     <%= t.text_field :description %>
 

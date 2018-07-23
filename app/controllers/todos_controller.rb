@@ -16,9 +16,9 @@ class TodosController < ApplicationController
   def show
     @todo = Todo.find(params[:id])
     if @todo.completed
-      @status = 'Completado'
+      @status = 'finalizado'
     else
-      @status = 'No completado'
+      @status = 'No finalizado'
     end
   end
 
