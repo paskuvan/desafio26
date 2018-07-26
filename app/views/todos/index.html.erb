@@ -1,10 +1,10 @@
-<h1>Inventario de ToDos</h1>
+<h1>Lista de tareas</h1>
 <% @todos.each do |t| %>
   <div class="well">
     <h2> <%= t.description %> </h2>
-    <%= link_to 'Ver ToDo', todo_path(t.id), class:'btn btn-success' %>
-    <%= link_to 'Modificar ToDo', edit_todo_path(t.id), class:'btn btn-warning' %>
-    <%= link_to "Eliminar ToDo", t, method: :delete, data: {confirm: '¿Eliminar ToDo?'}, class:'btn btn-danger' %>
+    <%= link_to 'Ver', todo_path(t.id), class:'btn btn-success' %>
+    <%= link_to 'Modificar', edit_todo_path(t.id), class:'btn btn-warning' %>
+    <%= link_to "Eliminar", t, method: :delete, data: {confirm: '¿Eliminar ToDo?'}, class:'btn btn-danger' %>
   </div>
 <% end %>
 
